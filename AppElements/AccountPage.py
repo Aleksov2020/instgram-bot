@@ -1,7 +1,7 @@
 import time
 
 import droid_do as dd
-
+from Point import Point
 
 class AccountPage(object):
     """
@@ -9,35 +9,30 @@ class AccountPage(object):
     """
     def __init__(self, index):
         self.index = index
-        self.x_stories = 91
-        self.y_stories = 195
-        self.x_pinned_stories = 71
-        self.y_pinned_stories = 635
-        self.x_posts = 117
-        self.y_posts = 769
-        self.x_reels = 360
-        self.y_reels = 711
-        self.x_subscribe = 161
-        self.y_subscribe = 517
+        self.stories = Point(91, 195)
+        self.pinned_stories = Point(71, 635)
+        self.posts = Point(117, 769)
+        self.reels = Point(360, 711)
+        self.subscribe = Point(161, 517)
 
     def click_stories(self):
-        dd.click(self.x_stories, self.y_stories, self.index)
+        dd.click_point(self.stories, self.index)
         time.sleep(1)
 
     def click_pinned_stories(self):
-        dd.click(self.x_pinned_stories, self.y_pinned_stories, self.index)
+        dd.click_point(self.pinned_stories, self.index)
         time.sleep(1)
 
     def click_posts(self):
-        dd.click(self.x_posts, self.y_posts, self.index)
+        dd.click_point(self.posts, self.index)
         time.sleep(1)
 
     def click_reels(self):
-        dd.click(self.x_reels, self.y_reels, self.index)
+        dd.click_point(self.reels, self.index)
         time.sleep(1)
 
     def click_subscribe(self):
-        dd.click(self.x_subscribe, self.y_subscribe, self.index)
+        dd.click_point(self.subscribe, self.index)
         time.sleep(1)
 
     def select_reel(self, reel_index=0):
