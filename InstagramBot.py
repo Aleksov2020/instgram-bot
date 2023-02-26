@@ -2,12 +2,12 @@ import random
 import time
 import droid_do as dd
 
-from AccountPage import AccountPage
-from BottomMenu import BottomMenu
-from Reel import Reel
-from SearchPage import SearchPage
-from SendMenu import SendMenu
-from StoryPublicMenu import StoryPublicMenu
+from AppElements.AccountPage import AccountPage
+from AppElements.BottomMenu import BottomMenu
+from AppElements.Reel import Reel
+from AppElements.SearchPage import SearchPage
+from AppElements.SendMenu import SendMenu
+from AppElements.StoryPublicMenu import StoryPublicMenu
 
 
 class InstagramBot(object):
