@@ -1,6 +1,6 @@
 import os
 import time
-from Point import Point
+from Utils.Point import Point
 
 def click(x_coordinate: int, y_coordinate: int, device_index: int) -> None:
     """

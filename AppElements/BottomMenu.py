@@ -1,7 +1,7 @@
 import time
 
 import droid_do as dd
-from Point import Point
+from Utils.Point import Point
 
 class BottomMenu(object):
     """
