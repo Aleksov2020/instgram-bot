@@ -1,7 +1,7 @@
 import time
 
 import droid_do as dd
-
+from Point import Point
 
 class BottomMenu(object):
     """
@@ -9,33 +9,28 @@ class BottomMenu(object):
     """
     def __init__(self, index):
         self.index = index
-        self.x_home = 73
-        self.y_home = 1247
-        self.x_search = 217
-        self.y_search = 1247
-        self.x_add = 363
-        self.y_add = 1247
-        self.x_reel = 503
-        self.y_reel = 1247
-        self.x_profile = 653
-        self.y_profile = 1247
+        self.home = Point(73, 1247)
+        self.search = Point(217, 1247)
+        self.add = Point(363, 1247)
+        self.reel = Point(503, 1247)
+        self.profile = Point(653, 2147)
 
     def click_home(self):
-        dd.click(self.x_home, self.y_home, self.index)
+        dd.click_point(self.home, self.index)
         time.sleep(1)
 
     def click_search(self):
-        dd.click(self.x_search, self.y_search, self.index)
+        dd.click_point(self.search, self.index)
         time.sleep(1)
 
     def click_add(self):
-        dd.click(self.x_add, self.y_add, self.index)
+        dd.click_point(self.add, self.index)
         time.sleep(1)
 
     def click_reel(self):
-        dd.click(self.x_reel, self.y_reel, self.index)
+        dd.click_point(self.reel, self.index)
         time.sleep(1)
 
     def click_profile(self):
-        dd.click(self.x_profile, self.y_profile, self.index)
+        dd.click_point(self.profile, self.index)
         time.sleep(1)
