@@ -1,6 +1,6 @@
 import os
 import time
-
+from Point import Point
 
 def click(x_coordinate: int, y_coordinate: int, device_index: int) -> None:
     """
@@ -11,6 +11,17 @@ def click(x_coordinate: int, y_coordinate: int, device_index: int) -> None:
 
     os.system(
         f"cd C:/Program^ Files/Microvirt/MEmu && memuc -i {device_index} adb shell input tap {x_coordinate} {y_coordinate}")
+    time.sleep(0.5)
+
+def click_point(point: Point, device_index: int) -> None:
+    """
+    :param x_coordinate: point to click x vertex
+    :param y_coordinate: point to click y vertex
+    :param device_index: index of device, which we want click
+    """
+
+    os.system(
+        f"cd C:/Program^ Files/Microvirt/MEmu && memuc -i {device_index} adb shell input tap {point.x_vertex} {point.y_vertex}")
     time.sleep(0.5)
 
 
