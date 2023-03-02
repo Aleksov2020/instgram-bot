@@ -14,6 +14,7 @@ class Reel(object):
         self.comment_button = Point(675, 911)
         self.send_button = Point(675, 979)
         self.account_button = Point(105, 1193)
+        self.additional_menu = Point(671, 1174)
 
     def click_like_button(self):
         dd.click_point(self.like_button, self.index)
@@ -29,6 +30,10 @@ class Reel(object):
 
     def click_go_to_account_page(self):
         dd.click_point(self.account_button, self.index)
+        time.sleep(1)
+
+    def click_add_menu(self):
+        dd.click_point(self.additional_menu, self.index)
         time.sleep(1)
 
     def watch_reel(self, duration=30):

@@ -41,21 +41,22 @@ def start_proxy(index):
 # create a PyMemuc instance, doing so will automatically link to the MEMUC executable
 memuc = PyMemuc()
 memuc.debug = True
-#rotate_proxy()
-
 index = 0
-# start the vm
-memuc.start_vm(index)
 time.sleep(7)
-
 instagram_bot = InstagramBot(index)
-print(1)
-instagram_bot.watch_target_reel('kristina.sense')
 
-time.sleep(100)
+time.sleep(1000)
+for index in range(0, 50):
+    memuc.start_vm(index)
+    print("Start VM")
+    time.sleep(7)
+    rotate_proxy()
+    print("Start PROXY")
+    start_proxy(index)
+    time.sleep(2)
+    instagram_bot = InstagramBot(index)
+    time.sleep(2)
+    instagram_bot.watch_target_reel('kristina.sense')
 
-# start_proxy(index)
-
-
-memuc.stop_vm(index)
+    memuc.stop_vm(index)
 
